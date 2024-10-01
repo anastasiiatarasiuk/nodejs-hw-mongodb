@@ -27,6 +27,11 @@ router.post(
   validateBody(createContactSchema),
   ctrlWrapper(createContactController),
 );
+router.post(
+  '/register',
+  validateBody(createContactSchema),
+  ctrlWrapper(createContactController),
+);
 router.patch(
   '/contacts/:contactId',
   isValidId,
